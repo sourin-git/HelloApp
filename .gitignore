@@ -1,0 +1,21 @@
+# .gitignore
+
+### IntelliJ / VS Code ###
+.idea/
+*.iml
+.vscode/
+
+# Compiled class files
+*.class
+*.jar
+*.log
+
+# Build Folders
+target/
+bin/
+out/
+build/
+dist/
+
+# System Files
+.DS_Store
