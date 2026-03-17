@@ -64,3 +64,22 @@ UC3 could only greet one person at a time. Users had to restart the app for ever
 * **For Loops:** Iterating through an array using an index (`i`).
 * **Logic inside Loops:** Using an `if` condition to avoid adding a comma after the very last name.
 
+---
+# UC5: Multiple Arguments using Enhanced For Loop
+
+### 1. Description
+The app processes multiple names using a for-each loop and provides a fallback to "World".
+
+### 2. Disadvantages of UC4
+UC4 used a traditional `for` loop which requires manual index management (`i++`, `args[i]`). This increases the chance of "off-by-one" errors.
+
+### 3. Main Flow
+1. App checks if `args.length` is zero.
+2. If yes, it prints "Hello, World!".
+3. If no, it uses an **Enhanced For Loop** to traverse the array.
+4. A `StringBuilder` joins names with a comma delimiter.
+
+### 4. Concepts Learned
+* **Enhanced For Loop:** Simplifies code by removing the need for an index variable.
+* **Conditional Delimiter:** Using `nameList.length() > 0` is a smart way to ensure commas only appear *between* names, not at the end.
+

@@ -1,22 +1,21 @@
 /**
- * HelloApp: UC4 - Display Hello with Multiple Command-Line Arguments
+ * HelloApp: UC5 - Use Enhanced For Loop for multiple arguments
  * @author Sourin
- * @version 4.0
+ * @version 5.0
  */
 public class HelloApp {
     public static void main(String[] args) {
-        if (args.length > 0) {
-            StringBuilder names = new StringBuilder();
-
-            for (int i = 0; i < args.length; i++) {
-                names.append(args[i]);
-                if (i < args.length - 1) {
-                    names.append(", ");
-                }
-            }
-            System.out.println("Hello, " + names.toString() + "!");
-        } else {
+        if (args.length == 0) {
             System.out.println("Hello, World!");
+        } else {
+            StringBuilder nameList = new StringBuilder();
+            for (String name : args) {
+                if (nameList.length() > 0) {
+                    nameList.append(", ");
+                }
+                nameList.append(name);
+            }
+            System.out.println("Hello, " + nameList.toString() + "!");
         }
     }
 }
