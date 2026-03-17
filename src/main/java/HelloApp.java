@@ -1,16 +1,11 @@
 /**
- * HelloApp: UC2 - Display Hello with Command-Line Argument
+ * HelloApp: UC3 - Handle Command-Line Arguments with Defaults
  * @author Sourin
- * @version 2.0
+ * @version 3.0
  */
 public class HelloApp {
     public static void main(String[] args) {
-        // Check if at least one argument was provided
-        if (args.length > 0) {
-            String name = args[0];
-            System.out.println("Hello, " + name + "!");
-        } else {
-            System.out.println("Hello, World!");
-        }
+        String name = (args.length > 0) ? args[0] : "World";
+        System.out.println("Hello, " + name + "!");
     }
 }
