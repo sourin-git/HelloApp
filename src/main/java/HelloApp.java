@@ -1,11 +1,22 @@
 /**
- * HelloApp: UC3 - Handle Command-Line Arguments with Defaults
+ * HelloApp: UC4 - Display Hello with Multiple Command-Line Arguments
  * @author Sourin
- * @version 3.0
+ * @version 4.0
  */
 public class HelloApp {
     public static void main(String[] args) {
-        String name = (args.length > 0) ? args[0] : "World";
-        System.out.println("Hello, " + name + "!");
+        if (args.length > 0) {
+            StringBuilder names = new StringBuilder();
+
+            for (int i = 0; i < args.length; i++) {
+                names.append(args[i]);
+                if (i < args.length - 1) {
+                    names.append(", ");
+                }
+            }
+            System.out.println("Hello, " + names.toString() + "!");
+        } else {
+            System.out.println("Hello, World!");
+        }
     }
 }

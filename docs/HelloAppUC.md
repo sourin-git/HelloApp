@@ -44,3 +44,23 @@ UC2 was "fragile." If a user forgot the argument, the app would throw an `ArrayI
 * **Defensive Programming:** Anticipating the missing argument to prevent crashes.
 * **Operator Overloading:** The `+` sign adds numbers but joins (concatenates) Strings.
 
+---
+# UC4: Display "Hello" with Multiple Command-Line Arguments
+
+### 1. Description
+The app accepts multiple names as arguments and greets them all in a single comma-separated line.
+
+### 2. Disadvantages of UC3
+UC3 could only greet one person at a time. Users had to restart the app for every new name, which is inefficient.
+
+### 3. Main Flow
+1. App detects the number of arguments.
+2. If multiple names exist, a `for` loop iterates through the `args` array.
+3. `StringBuilder` collects and formats the names.
+4. App prints the combined greeting.
+
+### 4. Concepts Learned
+* **StringBuilder:** A mutable class used to create strings without creating multiple objects in memory.
+* **For Loops:** Iterating through an array using an index (`i`).
+* **Logic inside Loops:** Using an `if` condition to avoid adding a comma after the very last name.
+
