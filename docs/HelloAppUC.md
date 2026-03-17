@@ -83,3 +83,23 @@ UC4 used a traditional `for` loop which requires manual index management (`i++`,
 * **Enhanced For Loop:** Simplifies code by removing the need for an index variable.
 * **Conditional Delimiter:** Using `nameList.length() > 0` is a smart way to ensure commas only appear *between* names, not at the end.
 
+---
+# UC6: Multiple Arguments using substring() Cleanup
+
+### 1. Description
+The app processes multiple names and uses the `substring()` method to remove the trailing comma and space after the loop.
+
+### 2. Disadvantages of UC5
+UC5 required a conditional check `if (nameList.length() > 0)` inside the loop. UC6 simplifies the loop by moving the formatting logic to a single step after the loop finishes.
+
+### 3. Main Flow
+1. App iterates through all names and blindly appends `, ` to each.
+2. After the loop, the app calculates the length of the string.
+3. `substring(0, length - 2)` is called to "cut off" the final unwanted comma.
+4. The cleaned string is printed.
+
+### 4. Concepts Learned
+* **substring(start, end):** Extracts a specific range of characters.
+* **Post-processing:** Building a "dirty" string first and cleaning it up at the end.
+* **Immutability:** Recognizing that `substring()` returns a *new* string and doesn't change the original `StringBuilder`.
+

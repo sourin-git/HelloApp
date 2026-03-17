@@ -1,21 +1,19 @@
 /**
- * HelloApp: UC5 - Use Enhanced For Loop for multiple arguments
+ * HelloApp: UC6 - Multiple arguments with substring cleanup
  * @author Sourin
- * @version 5.0
+ * @version 6.0
  */
 public class HelloApp {
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            StringBuilder nameList = new StringBuilder();
+            StringBuilder nameBuilder = new StringBuilder();
             for (String name : args) {
-                if (nameList.length() > 0) {
-                    nameList.append(", ");
-                }
-                nameList.append(name);
+                nameBuilder.append(name).append(", ");
             }
-            System.out.println("Hello, " + nameList.toString() + "!");
+            String finalNames = nameBuilder.substring(0, nameBuilder.length() - 2);
+            System.out.println("Hello, " + finalNames + "!");
         }
     }
 }
