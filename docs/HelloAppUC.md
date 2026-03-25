@@ -103,3 +103,23 @@ UC5 required a conditional check `if (nameList.length() > 0)` inside the loop. U
 * **Post-processing:** Building a "dirty" string first and cleaning it up at the end.
 * **Immutability:** Recognizing that `substring()` returns a *new* string and doesn't change the original `StringBuilder`.
 
+---
+# UC7: Multiple Arguments using String.join()
+
+### 1. Description
+The app uses the built-in `String.join()` method to concatenate multiple arguments with a comma-space delimiter.
+
+### 2. Disadvantages of UC6
+UC6 required "cleanup" logic (using `substring`) to remove a trailing comma. This is extra work and more prone to errors if the delimiter length changes.
+
+### 3. Main Flow
+1. App checks if `args` has elements.
+2. If yes, it calls `String.join(", ", args)`.
+3. The method returns a perfectly formatted string with NO trailing comma.
+4. App prints the result.
+
+### 4. Concepts Learned
+* **Static Utility Methods:** Calling a method directly on the `String` class without an object.
+* **String.join():** A specialized method for combining strings with a separator.
+* **Code Refactoring:** Reducing 15 lines of logic into a single, readable line.
+
